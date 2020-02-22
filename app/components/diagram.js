@@ -10,6 +10,7 @@ export default class MyComponent extends Component {
 
         this.store = this.get('diagram');
         this.diagram = null;
+        this.divId = 'diagram';
     }
 
     getLinks() {
@@ -98,7 +99,7 @@ export default class MyComponent extends Component {
         const $go = go.GraphObject.make;
         this.diagram = $go(
             go.Diagram,
-            'test',
+            this.divId,
             {
                 'undoManager.isEnabled': true
             }
